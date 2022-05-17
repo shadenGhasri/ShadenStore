@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import axios from "axios";
 import Loading from "./Loading";
 
@@ -23,7 +23,7 @@ const Product = () => {
   const ShowProduct = () => {
     return (
       <>
-        <div className="col-md-6">
+        <div className="col-md-6 pt-5">
           <img
             src={product.image}
             alt={product.title}
@@ -38,9 +38,12 @@ const Product = () => {
             Rating {product.rating && product.rating.rate}{" "}
             <i className="bi bi-star"></i>
           </p>
-          <p className="display-6 fw-bold my-4">
+          <h5 className="display-6 fw-bold my-4">
               ${product.price}
-          </p>
+          </h5>
+          <p className="lead">{product.description}</p>
+          <button className="btn btn-outline-dark px-4 py-2">Add to Cart</button>
+          <NavLink to="/cart" className="btn btn-dark ms-2 px-3 py-2">Go to Cart</NavLink>
         </div>
       </>
     );
@@ -49,7 +52,7 @@ const Product = () => {
   return (
     <>
       <div className="container">
-        <div className="row">{loading ? <Loading /> : <ShowProduct />}</div>
+        <div className="row mt-5">{loading ? <Loading /> : <ShowProduct />}</div>
       </div>
     </>
   );
