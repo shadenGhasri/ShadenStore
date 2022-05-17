@@ -2,6 +2,7 @@ import "./Products.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Loading from "./Loading";
+import { NavLink } from "react-router-dom";
 
 const Products = () => {
   const [data, setData] = useState([]);
@@ -63,9 +64,9 @@ const Products = () => {
                         {product.title.substring(0, 12)} ...
                       </h5>
                       <p className="card-text lead fw-bold">${product.price}</p>
-                      <a href="#" className="btn btn-outline-dark">
+                      <NavLink to={`/products/${product.id}`} className="btn btn-outline-dark">
                         Buy Now
-                      </a>
+                      </NavLink>
                     </div>
                   </div>
                 </div>

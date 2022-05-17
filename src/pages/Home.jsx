@@ -1,12 +1,12 @@
 
-import NavBar from "../components/Navbar";
+
 import Products from "../components/Products";
 import "./Home.css";
 
 const Home = () => {
   return (
     <>
-      <NavBar/>
+ 
       <div className="header">
         <div className="card bg-dark text-white border-0">
           <img
