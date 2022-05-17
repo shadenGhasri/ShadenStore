@@ -1,3 +1,4 @@
+import Products from "../components/Products";
 import "./Home.css";
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Products/>
     </div>
   );
 };
