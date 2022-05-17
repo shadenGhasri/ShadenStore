@@ -27,6 +27,25 @@ const Products = () => {
 
   }, []);
 
+  const Loading = ()=>{
+      return(
+          <>
+              Loading ...
+          </>
+      )
+  }
+
+  const ShowProducts = ()=>{
+     return(
+        <div className="buttonsFilter d-flex justify-content-center">
+          <button className="btn btn-outline-dark me-2">All</button>
+          <button className="btn btn-outline-dark me-2">Men's Clothing</button>
+          <button className="btn btn-outline-dark me-2">Women's Clothing</button>
+          <button className="btn btn-outline-dark me-2">Jewelery</button>
+          <button className="btn btn-outline-dark me-2">Electronic</button>
+        </div>
+     )
+  }
 
   return (<div>
       <div className="container my-5 py-5">
@@ -36,8 +55,12 @@ const Products = () => {
                   <hr />
               </div>
           </div>
+          <div className="row justify-content-center">
+              {loading ? <Loading/> : <ShowProducts/>}
+          </div>
       </div>
-  </div>);
+  </div>
+  );
 };
 
 export default Products;
