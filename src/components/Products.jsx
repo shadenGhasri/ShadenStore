@@ -17,13 +17,10 @@ const Products = () => {
       if (componentMounted) {
           setData(await response.clone().json())
           setFilter(await response.json());
-          setLoading(false);
-          console.log(filter)
-          
+          setLoading(false);       
       }
       return () => {
         componentMounted = false;
-        console.log(data);
       };
     };
     getProducts();
@@ -45,18 +42,21 @@ const Products = () => {
           <button className="btn btn-outline-dark me-2">Jewelery</button>
           <button className="btn btn-outline-dark me-2">Electronic</button>
         </div>
-        {filter && filter.map((product,index) => {
+        {
+            filter && filter.map((product) => {
           return (
             <>
-              <div className="col-md-3" key={index}>
-                <div className="card">
+            {console.log(filter)}
+              <div className="col-md-3">
+                <div className="card h-100 text-center p-4"  key={product.id}>
                   <img
                     src={product.image}
                     className="card-img-top"
                     alt={product.title}
+                    height="250px"
                   />
                   <div className="card-body">
-                    <h5 className="card-title">{product.title}</h5>
+                    <h5 className="card-title mb-0">{product.title.substring(0,12)}</h5>
                     <p className="card-text">${product.price}</p>
                     <a href="#" className="btn btn-primary">
                       Go somewhere
