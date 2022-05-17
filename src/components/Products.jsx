@@ -1,6 +1,7 @@
 import "./Products.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Loading from "./Loading";
 
 const Products = () => {
   const [data, setData] = useState([]);
@@ -26,9 +27,7 @@ const Products = () => {
     getProducts();
   }, []);
 
-  const Loading = () => {
-    return <>Loading ...</>;
-  };
+
 
   const ShowProducts = () => {
     return (
@@ -47,7 +46,7 @@ const Products = () => {
           return (
             <>
             {console.log(filter)}
-              <div className="col-md-3">
+              <div className="col-md-3 mb-4">
                 <div className="card h-100 text-center p-4"  key={product.id}>
                   <img
                     src={product.image}
@@ -56,10 +55,10 @@ const Products = () => {
                     height="250px"
                   />
                   <div className="card-body">
-                    <h5 className="card-title mb-0">{product.title.substring(0,12)}</h5>
-                    <p className="card-text">${product.price}</p>
-                    <a href="#" className="btn btn-primary">
-                      Go somewhere
+                    <h5 className="card-title mb-0">{product.title.substring(0,12)} ...</h5>
+                    <p className="card-text lead fw-bold">${product.price}</p>
+                    <a href="#" className="btn btn-outline-dark">
+                      Buy Now
                     </a>
                   </div>
                 </div>
