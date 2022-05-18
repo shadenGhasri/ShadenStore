@@ -10,10 +10,9 @@ const Product = () => {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [counter,setCounter] = useState(0);
-
 
   const dispatch = useDispatch();
+  
   const addProduct = (product)=>{
     dispatch(addCart(product))
   }
