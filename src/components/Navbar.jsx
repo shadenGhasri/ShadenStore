@@ -4,8 +4,9 @@ import { useSelector } from "react-redux";
 
 const NavBar = () => {
   const state = useSelector(state=> state.handleCart);
+  
   return (
-    <nav className="shadow-sm">
+    <nav className="navBox shadow-sm">
       <div className="container  d-flex justify-content-between align-items-center my-3">
         <h4 className="navLog">SHADEN</h4>
         <div className="navItems d-flex justify-content-center align-items-center">

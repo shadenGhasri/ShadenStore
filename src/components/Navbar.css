@@ -4,7 +4,9 @@
 *{
     box-sizing: border-box;
 }
-
+.navBox{
+    background-color: white;
+}
 .navLog{
     font-family: 'Fredoka', sans-serif;
     font-weight: bolder

@@ -1,6 +1,5 @@
 import "./Products.css";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import Loading from "./Loading";
 import { NavLink } from "react-router-dom";
 

@@ -13,7 +13,7 @@ const handleCart = (state = cart, action) => {
         );
       } else {
         const product = action.payload;
-        return [...state, { ...product, qty: 1 }];
+        return [...state, { ...product, qty : 1 }];
       }
       break;
     case "DELITEM":
