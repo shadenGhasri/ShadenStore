@@ -10,7 +10,7 @@ const Cart = () => {
   const handleClose = (item)=>{
     dispatch(delCart(item))
   }
-  
+
   const cartItems = (cartItem) => {
     return (
       <div className="d-flex justify-content-center my-5">
@@ -30,6 +30,14 @@ const Cart = () => {
     );
   };
 
-  return <>{state && state.map(cartItems)}</>;
+  return <>{state.length !== 0 ? state.map(cartItems) : (
+    <div className="d-flex justify-content-center my-5">
+      <div className="shadow-sm boxCart px-2 py-5">
+        <div className="row">
+          <h3>Your Cart is Empty</h3>
+        </div>
+      </div>
+    </div>
+  )}</>;
 };
 export default Cart;
