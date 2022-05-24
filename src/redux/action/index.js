@@ -7,6 +7,7 @@ export const addCart = (product)=>{
     }
 }
 
+
 //foe delete item from cart
 export const delCart = (product)=>{
     return{
