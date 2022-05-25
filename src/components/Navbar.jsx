@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <nav className="navBox shadow-sm">
       <div className="container  d-flex justify-content-between align-items-center my-3">
-        <h4 className="navLog">SHADEN</h4>
+        <h4 className="navLog py-2">SHADEN</h4>
         <div className="navItems d-flex justify-content-center align-items-center">
           <NavLink to="/" className="navItem px-3 text-dark" style={({isActive})=> { return {color: isActive ? "blue" : "black" , textDecorationLine : "none"}}}>
             Home
