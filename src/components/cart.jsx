@@ -63,7 +63,7 @@ const Cart = () => {
           </div>
         </div>
       )}
-      {state && button()}
+      {state.length !== 0  && button()}
     </>
   );
 };
