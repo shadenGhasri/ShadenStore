@@ -5,14 +5,12 @@ const handleCart = (state = cart, action) => {
   switch (action.type) {
     case "ADDITEM":
       return [...state , product]
-      break;
+
     case "DELITEM":
       return state = state.filter(e => e.id !== product.id)
-      break;
 
     default:
       return state;
-      break;
   }
 };
 

@@ -8,8 +8,6 @@ const Products = () => {
   const [loading, setLoading] = useState(false);
   const componentMounted = true;
 
-  const URL = "https://fakestoreapi.com/products";
-
   useEffect(() => {
     const getProducts = async () => {
       setLoading(true);
