@@ -51,7 +51,7 @@ const Checkout = () => {
         </div>
         <div className="col-md-7 col-lg-8">
           <h4 className="mb-3">Billing address</h4>
-          <form className="needs-validation was-validated" novalidate="">
+          <form className="needs-validation was-validated" noValidate="">
             <div className="row g-3">
               <div className="col-sm-6">
                 <label htmlFor="firstName" className="form-label">
@@ -154,7 +154,7 @@ const Checkout = () => {
                   Country
                 </label>
                 <select className="form-select" id="country" required="">
-                  <option value="">Choose...</option>
+                  <option>Choose...</option>
                   <option>United States</option>
                 </select>
                 <div className="invalid-feedback">
@@ -334,3 +334,5 @@ const Checkout = () => {
 };
 
 export default Checkout;
+
+
