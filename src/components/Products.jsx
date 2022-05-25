@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Loading from "./Loading";
 import { NavLink } from "react-router-dom";
+import "./products.css"
 
 const Products = () => {
   const [data, setData] = useState([]);
