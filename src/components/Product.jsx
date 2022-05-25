@@ -57,7 +57,7 @@ const Product = () => {
             width="400px"
           />
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6 pt-5">
           <h4 className="text-uppercase text-black-50">{product.category}</h4>
           <h1 className="display-5">{product.title}</h1>
           <p className="lead fw-bolder">

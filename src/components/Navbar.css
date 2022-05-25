@@ -1,5 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css");
 @import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Dancing+Script&family=Fredoka:wght@300&family=Grape+Nuts&family=Libre+Baskerville:ital@1&family=Lobster&family=Nanum+Gothic:wght@800&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Smooch&display=swap');
 
 *{
     box-sizing: border-box;
@@ -8,6 +9,14 @@
     background-color: white;
 }
 .navLog{
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'Smooch', cursive;
     font-weight: bolder
 }
+
+
+@media only screen and (max-width: 700px) {
+    .navLog {
+      font-size: small;
+      padding-top: 1rem;
+    }
+  }
