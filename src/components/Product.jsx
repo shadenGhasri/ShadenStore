@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink, useParams } from "react-router-dom";
+import axios from "axios";
 import Skeleton from "react-loading-skeleton";
 import { useDispatch  } from "react-redux";
 import { addCart } from "../redux/action";
@@ -19,10 +20,10 @@ const Product = () => {
   useEffect(() => {
     const getProduct = async () => {
       setLoading(true);
-      const response = await fetch(
+      const response = await axios.get(
         `https://fakestoreapi.com/products/${id}`
       );
-      setProduct(await response.json());
+      setProduct(await response.data);
       setLoading(false);
     };
     getProduct();
